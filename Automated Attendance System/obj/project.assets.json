@@ -1,0 +1,106 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {}
+  },
+  "libraries": {},
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore >= 3.1.27",
+      "Microsoft.AspNetCore.Identity.EntityFrameworkCore >= 3.1.27",
+      "Microsoft.AspNetCore.Identity.UI >= 3.1.27",
+      "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.27",
+      "Microsoft.EntityFrameworkCore.Tools >= 3.1.27"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\M.S\\.nuget\\packages\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\M.S\\source\\repos\\Automated Attendance System\\Automated Attendance System.csproj",
+      "projectName": "Automated Attendance System",
+      "projectPath": "C:\\Users\\M.S\\source\\repos\\Automated Attendance System\\Automated Attendance System.csproj",
+      "packagesPath": "C:\\Users\\M.S\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\M.S\\source\\repos\\Automated Attendance System\\obj\\",
+      "projectStyle": "PackageReference",
+      "configFilePaths": [
+        "C:\\Users\\M.S\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1",
+          "projectReferences": {}
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1",
+        "dependencies": {
+          "Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.27, )"
+          },
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.27, )"
+          },
+          "Microsoft.AspNetCore.Identity.UI": {
+            "target": "Package",
+            "version": "[3.1.27, )"
+          },
+          "Microsoft.EntityFrameworkCore.SqlServer": {
+            "target": "Package",
+            "version": "[3.1.27, )"
+          },
+          "Microsoft.EntityFrameworkCore.Tools": {
+            "target": "Package",
+            "version": "[3.1.27, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48",
+          "net481"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.AspNetCore.App": {
+            "privateAssets": "none"
+          },
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.400\\RuntimeIdentifierGraph.json"
+      }
+    }
+  },
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Failed to download package 'Microsoft.Data.SqlClient.1.1.3' from 'https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/1.1.3/microsoft.data.sqlclient.1.1.3.nupkg'.\r\nThe download of 'https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/1.1.3/microsoft.data.sqlclient.1.1.3.nupkg' timed out because no data was received for 60000ms.\r\n  Exception of type 'System.TimeoutException' was thrown."
+    }
+  ]
+}

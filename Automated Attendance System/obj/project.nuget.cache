@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "ubJOYiDosmbQEVz/e3ouyQVXTjBr6765Bg4G7YKui4jOxicdgu47z847QMdbVErMl/IXlfn4cVChADi7m5j4ew==",
+  "success": false,
+  "projectFilePath": "C:\\Users\\M.S\\source\\repos\\Automated Attendance System\\Automated Attendance System.csproj",
+  "expectedPackageFiles": [],
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Error",
+      "message": "Failed to download package 'Microsoft.Data.SqlClient.1.1.3' from 'https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/1.1.3/microsoft.data.sqlclient.1.1.3.nupkg'.\r\nThe download of 'https://api.nuget.org/v3-flatcontainer/microsoft.data.sqlclient/1.1.3/microsoft.data.sqlclient.1.1.3.nupkg' timed out because no data was received for 60000ms.\r\n  Exception of type 'System.TimeoutException' was thrown."
+    }
+  ]
+}
