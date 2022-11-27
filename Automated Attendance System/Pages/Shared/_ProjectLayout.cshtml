@@ -1,0 +1,133 @@
+﻿
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automated Attendance System</title>
+    <meta name="description" content="">
+    <meta name="robots" content="all,follow">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <!-- Google fonts - Popppins for copy-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,800">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="~/Theme/Dashboard/css/style.css">
+    <link rel="stylesheet" href="~/Scripts/sweetalert2.min.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="~/fonts/icon.PNG">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.css" />
+
+
+
+</head>
+
+<body>
+    <!-- navbar-->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg px-4 py-2 bg-white shadow">
+            <a href="#" class="sidebar-toggler text-gray-500 mr-4 mr-lg-5 lead"><i class="fas fa-align-left"></i></a><a href="#" class="navbar-brand font-weight-bold text-uppercase text-base">Automated Attendance System</a>
+            <ul class="ml-auto d-flex align-items-center list-unstyled mb-0">
+                <li class="nav-item">
+
+                    <partial name="_LoginPartial" />
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+        <div id="sidebar" class="sidebar py-3">
+            <div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">
+            </div>
+
+            <ul class="sidebar-menu list-unstyled">
+                <li class="sidebar-list-item"><a href="/Home/Index" class="sidebar-link text-muted "><i class="o-home-1 mr-3 text-gray"></i><span>Home</span></a></li>
+                <li class="sidebar-list-item"><a href="/Inventory/AddInventory" class="sidebar-link text-muted "><i class="o-database-1 mr-3 text-gray"></i><span>Manage Departments</span></a></li>
+                <li class="sidebar-list-item"><a href="/Admin/RouteType" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Manage Degrees</span></a></li>
+                <li class="sidebar-list-item"><a href="/Admin/RouteCharges" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Manage Classes</span></a></li>
+                <li class="sidebar-list-item">
+                    <a href="#" data-toggle="collapse" data-target="#pages001" aria-expanded="false" aria-controls="pages01" class="sidebar-link text-muted"><i class="o-imac-screen-1 mr-3 text-gray"></i><span>Manage Schedule </span></a>
+                    <div id="pages001" class="collapse">
+                        <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                            <li class="sidebar-list-item"><a href="/Payroll/Index" class="sidebar-link text-muted pl-lg-5">New Class</a></li>
+                            <li class="sidebar-list-item"><a href="/Payroll/AddPayment" class="sidebar-link text-muted pl-lg-5">Update Schedule </a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="#" data-toggle="collapse" data-target="#pages01" aria-expanded="false" aria-controls="pages01" class="sidebar-link text-muted"><i class="o-survey-1 mr-3 text-gray"></i><span>Attendance</span></a>
+                    <div id="pages01" class="collapse">
+                        <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                            <li class="sidebar-list-item"><a href="/Reports/InventoryLedger" class="sidebar-link text-muted pl-lg-5">Detail Report</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="sidebar-list-item">
+                    <a href="#" data-toggle="collapse" data-target="#pages" aria-expanded="false" aria-controls="pages" class="sidebar-link text-muted"><i class="o-sales-up-1 mr-3 text-gray"></i><span>Courses</span></a>
+                    <div id="pages" class="collapse">
+                        <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                            <li class="sidebar-list-item"><a href="/Route/NewRoute" class="sidebar-link text-muted pl-lg-5">New Course</a></li>
+                            <li class="sidebar-list-item"><a href="/Route/CloseRoute" class="sidebar-link text-muted pl-lg-5">Manage Previous</a></li>
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="sidebar-list-item">
+                    <a data-toggle="collapse" data-target="#rp" aria-expanded="false" aria-controls="rp" class="sidebar-link text-muted"><i class="o-paperwork-1 mr-3 text-gray"></i><span>Users</span></a>
+                    <div id="rp" class="collapse">
+                        <ul class="sidebar-menu list-unstyled border-left border-primary border-thick">
+                            <li class="sidebar-list-item"><a href="/Admin/NewUser" class="sidebar-link text-muted pl-lg-5">System Users</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li class="sidebar-list-item"><a href="/Admin/AddStore" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>System Activity</span></a></li>
+                @*      <li class="sidebar-list-item"><a href="/Admin/NewWareHouse" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>System E</span></a></li>
+               <li class="sidebar-list-item"><a href="/Zone/AddZone" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Zone</span></a></li>
+                <li class="sidebar-list-item"><a href="/zone/AddZipcode" class="sidebar-link text-muted"><i class="o-table-content-1 mr-3 text-gray"></i><span>Zip Code</span></a></li>
+                <li class="sidebar-list-item"><a href="/Admin/GetAudit" class="sidebar-link text-muted"><i class="o-exit-1 mr-3 text-gray"></i><span>Audit</span></a></li>*@
+
+
+
+
+            </ul>
+
+
+        </div>
+        <div class="page-holder w-100 d-flex flex-wrap">
+            <div class="container-fluid">
+
+                @RenderBody()
+            </div>
+            <footer class="footer bg-white shadow align-self-end py-3 px-xl-5 w-100">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-left text-primary">
+                            <p class="mb-2 mb-md-0">Automated Attendance System &copy; @DateTime.Now.Year</p>
+                        </div>
+                        <div class="col-md-6 text-center text-md-right text-gray-400">
+                            <p class="mb-0">
+                                Developed by :  <span title="Research & Development Center Lahore Pakistan">Alfa Technologies</span>
+
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <!-- JavaScript file-->
+    <script src="~/Theme/Dashboard/js/script.js"></script>
+    <script src="~/Scripts/sweetalert2.min.js"></script>
+    @*<script src="~/Scripts/DataTables/media/js/jquery.dataTables.js"></script>*@
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.21/datatables.min.js"></script>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@2.1.7/dist/loadingoverlay.min.js"></script>
+
+    @RenderSection("scripts", required: false)
+</body>
+
+</html>
